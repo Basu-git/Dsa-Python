@@ -1,16 +1,32 @@
 def freq(arr):
-    result=[] #result=[Element,Frequency]
-    visited=set()
+    
+    #Time complexity O(N)
+   # Time complexity O(N)
+
+# result = []  # result = [Element, Frequency]
+# visited = set()
+
+# for i in arr:
+#     if arr[i] in visited:
+#         continue
+    
+#     count = 0
+    
+#     for j in arr:
+#         if arr[i] == arr[j]:
+#             count += 1
+    
+#     result.append([arr[i], count])
+#     visited.add(arr[i])
+
+# return result
+    #Time complexity O(1)
+    fre={}
     for i in arr:
-        if arr[i] in visited:
-            continue
-        count=0
-        for j in arr:
-            if(arr[i]==arr[j]):
-                count+=1
-        result.append([arr[i],count])
-        visited.add(arr[i])
+        fre[i]=fre.get(i,0)+1
+    result=max(fre,key=fre.get)
     return result
+        
                 
     
     
