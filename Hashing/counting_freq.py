@@ -21,12 +21,11 @@ def freq(arr):
 
 # return result
     #Time complexity O(1)
-    fre={}
-    for i in arr:
-        fre[i]=fre.get(i,0)+1
-    result=max(fre,key=fre.get)
-    return result
-        
+  fre={}
+  for i in arr:
+      fre[i]=fre.get(i,0)+1
+  result=[[k,v] for k,v in fre.items()]
+  return result
                 
     
     

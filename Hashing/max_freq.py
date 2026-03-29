@@ -1,17 +1,26 @@
 
 def freq(arr):
-        result={}
-        visited=set()
-        for i in range(len(arr)):
-            if arr[i] in visited:
-                continue
-            count=0
-            for j in range(len(arr)):
-                if(arr[i]==arr[j]):
-                    count+=1
-                    result[arr[i]]=count
-                    visited.add(arr[i])
-        return max(result,key=result.get)
+    fre={}
+    for i in arr:
+        fre[i]=fre.get(i,0)+1
+    result=max(fre,key=fre.get)
+    return result
+
+
+"""
+result={}
+visited=set()
+for i in range(len(arr)):
+    if arr[i] in visited:
+        continue
+    count=0
+    for j in range(len(arr)):
+        if(arr[i]==arr[j]):
+            count+=1
+            result[arr[i]]=count
+            visited.add(arr[i])
+return max(result,key=result.get)
+"""
     
     
 """Another Approach
